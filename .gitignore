@@ -1,0 +1,6 @@
+node_modules/
+slides.pdf
+slides.html
+demo/vystupy/*
+!demo/vystupy/.gitkeep
+.DS_Store

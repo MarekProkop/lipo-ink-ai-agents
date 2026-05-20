@@ -1,0 +1,14 @@
+{
+  "name": "lipo-ink-ai-agents",
+  "version": "1.0.0",
+  "description": "AI agenti v digitálním marketingu — přednáška pro Lipo.ink, 20. 5. 2026",
+  "scripts": {
+    "preview": "marp --preview slides.md",
+    "build": "marp slides.md -o index.html --html --allow-local-files",
+    "watch": "marp slides.md -o index.html --html --allow-local-files --watch",
+    "pdf": "marp slides.md -o slides.pdf --allow-local-files"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4"
+  }
+}
