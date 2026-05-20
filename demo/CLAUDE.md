@@ -1,21 +1,22 @@
 # CLAUDE.md
 
-Pokyny pro AI agenta v tomto projektu.
+Pokyny pro AI agenta v této pracovní složce.
 
-## Co je tento projekt
+## Co je tahle složka
 
-Zvažujeme, jestli má smysl krátkodobě pronajímat volný byt v přízemí našeho domu v České Lípě turistům. Tahle složka shromažďuje podklady a výstupy k tomu rozhodnutí.
+Univerzální pracovní prostor pro práci s AI agentem. Drží pohromadě kontext, projekty a výstupy, takže agent má vždycky po ruce, co potřebuje. Klidně si ji vezměte jako vzor a nasypte do ní vlastní práci.
 
-## Struktura složek
+## Struktura
 
-- `podklady/` — informace o České Lípě a okolí: data, historie, gastronomie.
-- `vylety/` — záznamy konkrétních výletů do okolí včetně fotek.
-- `styl/` — jak psát příspěvky na sociální sítě.
-- `vystupy/` — sem ukládej hotové výstupy: byznys plán, příspěvky.
+- `kontext/` — informace platné napříč projekty: kdo jsem (`o-mne.md`), jak píšu (`jak-pisu.md`) a sdílené znalosti (např. `ceska-lipa/`).
+- `projekty/` — jedna podsložka na každý projekt, každý se svým `o-projektu.md`.
+- `sablony/` — opakovaně použitelné vzory.
+- `vystupy/` — hotové výstupy, které nepatří do konkrétního projektu.
 
-## Konvence
+## Pravidla
 
-- Hotové výstupy ukládej do `vystupy/` jako soubory ve formátu .md.
-- Když píšeš příspěvek na sociální sítě, vždy se nejdřív podívej do `styl/`.
-- Čísla v byznys plánu drž orientační a zaokrouhlená.
+- Nový projekt znamená novou složku v `projekty/` s krátkým `o-projektu.md`. Výstupy projektu ukládej do jeho složky.
+- Než začneš psát jakýkoli text, přečti si `kontext/jak-pisu.md`.
+- Než budeš řešit cokoli o České Lípě a okolí, podívej se do `kontext/ceska-lipa/`.
+- Mapu z GPX trasy vyrobíš skriptem `gpx-na-mapu.js`: `node gpx-na-mapu.js <trasa.gpx> <mapa.png>`.
 - Piš česky, věcně, bez anglicismů.

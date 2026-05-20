@@ -2,6 +2,7 @@
 datum: 2026-04-15
 delka_km: 1.72
 prevyseni_m: 6
+gpx: psi-kostely-tiche-udoli-2026-04-15-trasa.gpx
 mista:
   - Psí kostely
   - Tiché údolí

@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^4"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5",
+    "staticmaps": "^1.13.1"
   }
 }

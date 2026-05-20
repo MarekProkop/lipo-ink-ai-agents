@@ -2,6 +2,7 @@
 datum: 2026-04-18
 delka_km: 1.91
 prevyseni_m: 85
+gpx: rabstejnska-vyhlidka-2026-04-18-trasa.gpx
 mista:
   - Rabštejnská vyhlídka
   - Velenický kopec

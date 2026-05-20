@@ -2,5 +2,5 @@ node_modules/
 slides.pdf
 slides.html
 demo/vystupy/*
-!demo/vystupy/.gitkeep
+!demo/vystupy/README.md
 .DS_Store

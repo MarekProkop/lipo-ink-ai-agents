@@ -52,6 +52,18 @@ style: |
     font-size: 1.3em;
     font-weight: bold;
   }
+  .copy-btn {
+    display: inline-block;
+    margin-top: 0.5em;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.5em;
+    padding: 0.35em 0.9em;
+    border: 1px solid #2563eb;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #2563eb;
+    cursor: pointer;
+  }
 ---
 
 <!-- _class: lead -->
@@ -164,114 +176,103 @@ Byznys plán pro krátkodobý pronájem bytu
 
 ---
 
-<!-- _class: lead -->
+## Ukázka 1, prompt 1
 
-<span class="demo">▶ Živá ukázka</span>
+> Chci krátkodobě pronajímat volný byt v přízemí našeho domu v České Lípě. Pravděpodobně přes Booking a Airbnb, i přes vlastní web. Založíme na to projekt. Zeptej se mě na všechno, co potřebuješ vědět, a připrav podrobné zadání se všemi potřebnými podklady.
 
-Byznys plán krátkodobého pronájmu
-
-<!--
-Plný scénář viz demo-scenare.md. Prompty:
-
-1. "Zvažuju, že bychom byt v přízemí našeho domu v České Lípě začali
-   krátkodobě pronajímat turistům přes Booking a Airbnb. Chci jednoduchý
-   byznys plán, ať vím, jestli to dává smysl. Než začneš počítat, zeptej
-   se mě na všechno, co potřebuješ vědět o bytu a o tom, co od pronájmu
-   čekám."
-2. "Podívej se do mého Vaultu, co víme o České Lípě a okolí: sociodemografie,
-   turistická data, záznamy výletů. Shrň, co je relevantní pro pronájem."
-3. "Spočítej hrubou ekonomiku na rok: cena za noc, konzervativní obsazenost,
-   náklady (úklid, energie, provize, údržba, amortizace). Ukaž výnos, náklady
-   a zisk, čísla zaokrouhli."
-4. "Ulož to jako přehledný byznys plán do souboru."
-
-Záloha: pokud vypadne wifi, přeskoč na následující slide.
--->
+<button class="copy-btn">📋 Kopírovat</button>
 
 ---
 
-## Záloha: výstup ukázky 1
+## Ukázka 1, prompt 2
 
-<div class="fallback">
-Sem přijde screenshot výstupu — <code>images/demo1-byznysplan.png</code>
-</div>
+> Udělej si průzkum krátkodobého ubytování v České Lípě: jaká je nabídka, jaké jsou ceny a jak ubytovatelé svou nabídku prezentují. Ulož ho do projektu.
 
-<!--
-Před přednáškou: ukázku projet nanečisto, výstup vyfotit a uložit
-jako images/demo1-byznysplan.png. Pak tenhle blok nahradit:
-![w:900](images/demo1-byznysplan.png)
--->
+<button class="copy-btn">📋 Kopírovat</button>
+
+---
+
+## Ukázka 1, prompt 3
+
+> Na základě zadání a průzkumu připrav byznys plán: orientační ceny za noc, obsazenost, náklady, výnosy a roční zisk. Ulož ho do projektu.
+
+<button class="copy-btn">📋 Kopírovat</button>
 
 ---
 
 ## Co se právě stalo
 
-- Tohle byste napsali do ChatGPT → dostanete obecný text o pronájmech.
+- Tohle byste napsali do ChatGPT a dostali obecný text o pronájmech.
 - Agent místo toho:
-  - vedl se mnou rozhovor a ptal se,
-  - použil **reálná data** o České Lípě z mých souborů,
-  - dal mi **soubor**, ne jen odpověď v okně.
+  - založil projekt a ptal se na to, co potřeboval vědět,
+  - použil **kontext** o České Lípě z mých souborů,
+  - prozkoumal nabídku ubytování přímo na webu,
+  - dal mi **hotové soubory**: zadání i byznys plán.
 - Z odpovědi se stal pracovní materiál, se kterým jdu dál.
 
 ---
 
 <!-- _class: lead -->
 
-## Jak na to přejít
+## Jak přejít
 
-Od náhodných promptů k systému
-
----
-
-## Past: zůstat v „chatu"
-
-- Většina lidí AI jen pokládá otázky.
-- Pokaždé od nuly: vysvětlit kontext, styl, co vlastně chci.
-- Funguje to, ale je to dřina a výsledky kolísají.
-- Řešení: dát agentovi **strukturovaný kontext**.
+Návod v pěti krocích
 
 ---
 
-## Postavte si strukturu
+## Co k tomu potřebujete
 
-Jedna složka pro práci s agentem:
-
-- **O mně**: kdo jsem, čím se zabývám, jak píšu.
-- **Projekty**: jedna složka na každý projekt.
-- **Šablony**: opakovaně použitelné vzory.
-- **Výstupy**: kam agent ukládá hotové věci.
-
-> Náhodné promptování → systém.
+- Předplatné Claude. Claude Code je jeho součástí.
+- Doporučuju plán **Max 5×**: 100 USD měsíčně + DPH.
+- Programátorské znalosti nepotřebujete.
+- Pro rozsáhlejší automatizace se hodí samostatný, trvale běžící počítač.
 
 ---
 
-## Soubory místo promptů
+## 1. Přestaňte používat chatboty
 
-- Místo opakování v každém chatu to napište jednou do souboru.
+- Místo ChatGPT si otevřete Claude Code v aplikaci.
+- Ze začátku pracujte stejně jako dřív: zeptáte se, agent odpoví.
+- Berte to jako nový návyk, dejte mu pár dní.
+- Postupně zkoušejte víc: dejte agentovi soubor, nechte ho úkol udělat, ne jen poradit.
+
+---
+
+## 2. Založte si hlavní pracovní prostor
+
+- Vytvořte jednu složku, se kterou bude agent pracovat.
+- Rozdělte ji na čtyři podsložky: **kontext**, **projekty**, **šablony**, **výstupy**.
+- Ve složce `projekty` má každý úkol vlastní podsložku.
+- Přidejte `CLAUDE.md` s popisem, jak je prostor uspořádaný. Claude vám ho připraví příkazem `/init`.
+- Agent pak ví, kde co hledat a kam ukládat.
+
+---
+
+## 3. Budujte kontext
+
+- Co byste agentovi opakovali v každém chatu, napište jednou do souboru.
 - `o-mne.md`: kdo jste a v jakém kontextu pracujete.
-- `muj-styl.md`: jak psát i jak nepsat, váš jazyk a tón.
-- `CLAUDE.md`: pravidla projektu, agent si je přečte sám pokaždé.
-- Doladíte jednou, projeví se to všude.
-
-> Pár souborů přebije padesát ad hoc promptů.
+- `jak-pisu.md`: jak psát i jak nepsat, váš jazyk a tón.
+- Kontext doplňujte postupně. Doladíte ho jednou, projeví se všude.
 
 ---
 
-## Nechte agenta myslet za sebe
+## 4. Napojte nástroje
 
-- Místo „udělej X" → „navrhni možnosti, seřaď je, naplánuj postup".
-- Nechte ho ptát se, plánovat, počítat.
-- Posun z **operátora** na **rozhodovatele**.
-- Vy rozhodujete, agent vykonává.
+- Google Docs, Disk, Kalendář, Gmail, Slack a další.
+- **Google Workspace CLI**: práce s Diskem a tabulkami z příkazové řádky.
+- Stáhne i přílohu e-mailu, třeba přečte PDF fakturu.
 
 ---
 
-## Praktický start
+## 5. Automatizujte
 
-- **Den 1:** založte složku a soubor o sobě.
-- Vezměte jeden **reálný** úkol, ne cvičný.
-- Nechte agenta navrhnout postup, než ho pustíte do práce.
-- Iterujte konverzací, nehledejte „lepší prompt".
+- Opakovaný postup uložte jako **skill**, pojmenovanou dovednost, kterou agent kdykoli zopakuje.
+- Skill jde i naplánovat: agent ho spustí sám, i když u toho nejste.
+- Ráno připraví report, vy si ho přečtete u kávy.
+- Přestáváte „používat AI", provozujete systém.
+
+> **Skill „Co mám dneska zaplatit":** projde e-mailovou schránku, najde faktury, ověří proti e-mailům z banky, co už je zaplacené, a vypíše platby k úhradě i s QR kódy.
 
 ---
 
@@ -286,52 +287,47 @@ Příspěvek na Facebook z výletu do okolí
 ## Ukázka 2: zadání
 
 - Pronájem potřebuje hosty a hosty zajímá okolí.
-- V Obsidianu mám záznamy z reálných výletů: fotky, trasy, poznámky.
+- Mám záznamy z reálných výletů do okolí: fotky, trasy, poznámky.
 - Úkol: z hotového záznamu udělat příspěvek na Facebook.
 - Sledujte, jak agent použije **můj existující soubor** a stylový vzor.
 
 ---
 
-<!-- _class: lead -->
+## Ukázka 2, prompt 1
 
-<span class="demo">▶ Živá ukázka</span>
+> Ukaž mi, z jakých výletů mám poznámky.
 
-Příspěvek na Facebook z výletu
+<button class="copy-btn">📋 Kopírovat</button>
 
 <!--
-Plný scénář viz demo-scenare.md. Prompty:
-
-1. "Vezmi záznam výletu '2026-04-18 Rabštejnská vyhlídka' z Vaultu
-   a napiš z něj příspěvek na Facebook pro stránku našeho pronájmu.
-   Cíl: nalákat hosty, aby vyrazili do okolí. Drž se stylového souboru."
-2. "Ukaž, které fotky z výletu by se k příspěvku hodily."
-3. "Zkrať to o třetinu a přidej výzvu k akci."
-
-Záloha: pokud vypadne wifi, přeskoč na následující slide.
+Příprava: Claude Code nad složkou demo/. Styl psaní si agent vezme
+z kontext/jak-pisu.md sám podle CLAUDE.md.
 -->
 
 ---
 
-## Záloha: výstup ukázky 2
+## Ukázka 2, prompt 2
 
-<div class="fallback">
-Sem přijde screenshot výstupu — <code>images/demo2-facebook.png</code>
-</div>
+> Vezmi výlet na Rabštejnskou vyhlídku a napiš z něj příspěvek na Facebookovou stránku pronájmu. Vyber k příspěvku i vhodné fotky.
 
-<!--
-Před přednáškou: ukázku projet nanečisto, výstup vyfotit a uložit
-jako images/demo2-facebook.png. Pak tenhle blok nahradit:
-![w:900](images/demo2-facebook.png)
--->
+<button class="copy-btn">📋 Kopírovat</button>
+
+---
+
+## Ukázka 2, prompt 3
+
+> Z trasy výletu vyrob mapku a přidej ji k příspěvku.
+
+<button class="copy-btn">📋 Kopírovat</button>
 
 ---
 
 ## Co se právě stalo
 
-- Agent nepsal od nuly, vzal můj **existující záznam výletu**.
-- Použil **stylový soubor**, takže výstup zní jako já, ne jako AI.
-- Stejný postup → desítky příspěvků v konzistentním stylu.
-- Tohle je struktura ze třetí části v praxi.
+- Agent vyšel z mého **hotového záznamu výletu**, nepsal od nuly.
+- Použil **můj styl psaní**, příspěvek zní jako já, ne jako AI.
+- Z trasy výletu sám **vyrobil mapku** do příspěvku.
+- Stejný postup zvládne desítky příspěvků v konzistentním stylu.
 
 ---
 
@@ -343,30 +339,13 @@ Co ještě agenti umí
 
 ---
 
-## Skills: naučte agenta dovednost
+## Pokročilé možnosti
 
-- **Skill** = znovupoužitelný postup, který si agent zapamatuje.
-- Jednou popíšete, jak něco děláte, příště stačí název.
-- Vlastní i sdílené od komunity.
-- Z agenta se stává nástroj na míru vaší práci.
-
----
-
-## Napojení na vaše nástroje
-
-- Google Docs, Disk, Kalendář, Gmail, Slack a další.
-- **Google Workspace CLI**: práce s Diskem a tabulkami z příkazové řádky.
-- Stáhne i přílohu e-mailu, třeba přečte PDF fakturu.
-
-> **Příklad — skill „Co mám dneska zaplatit":** projde e-mailovou schránku, najde faktury, ověří proti e-mailům z banky, co už je zaplacené, a vypíše platby k úhradě i s QR kódy.
-
----
-
-## Plánované úlohy
-
-- Agent může pracovat, i když u toho nejste.
-- Ráno připraví report, vy si ho přečtete u kávy.
-- Přestáváte „používat AI", provozujete systém.
+- **Vlastní knihovna skillů**: poskládejte si skilly pro svou opakovanou práci a/nebo pro specifické projekty.
+- **Napojení na vlastní systémy**: agent vidí do vašeho CRM, e-shopu nebo databáze (technologie MCP, API, CLI).
+- **Subagenti**: agent rozdělí velký úkol mezi pomocné agenty a řeší je souběžně a nezávisle.
+- **Nástroje na míru**: popíšete, co potřebujete, a agent vám to postaví i bez programování (vibecoding).
+- **Sdílení s týmem**: pracovní prostor jako sdílené úložiště pro celý tým pomocí Git a Github.
 
 ---
 
@@ -388,9 +367,36 @@ Co ještě agenti umí
 
 ---
 
+# Bonus!
+
+---
+
+## Bonus: jak vznikala tato přednáška
+
+- Celá vznikla dnes s Claude Codem.
+- Dal jsem mu své poznámky k tématu a nechal ho navrhnout koncept.
+- Pak jsme to krok za krokem ladili prezentaci v [Marpu](https://marp.app/): on psal, já připomínkoval.
+- Připravil i demo složku, spustil a vyhodnotil testy ukázky.
+- Celou přednášku i demo si můžete projít ve [veřejném repozitáři na Githubu](https://github.com/MarekProkop/lipo-ink-ai-agents).
+
+---
+
 <!-- _class: lead -->
 
 # Dotazy a diskuse
 
 Marek Prokop
 marek@prokopsw.cz
+
+<script>
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.copy-btn');
+  if (!btn) return;
+  const sec = btn.closest('section');
+  const bq = sec && sec.querySelector('blockquote');
+  if (!bq) return;
+  navigator.clipboard.writeText(bq.innerText.trim());
+  btn.textContent = '✅ Zkopírováno';
+  setTimeout(() => { btn.textContent = '📋 Kopírovat'; }, 1500);
+});
+</script>
